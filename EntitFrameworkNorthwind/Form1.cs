@@ -100,5 +100,11 @@ namespace EntitFrameworkNorthwind
             dataGridView6.DataSource = nwe.fn_shippingTerm(dateTimePicker1.Value, dateTimePicker2.Value).ToList();
 
         }
+
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
     }
 }

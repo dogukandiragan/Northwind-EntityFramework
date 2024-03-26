@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -49,6 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -198,7 +200,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1172, 249);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1172, 152);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(118, 22);
             this.dateTimePicker1.TabIndex = 19;
@@ -207,14 +209,14 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1172, 277);
+            this.dateTimePicker2.Location = new System.Drawing.Point(1172, 180);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(118, 22);
             this.dateTimePicker2.TabIndex = 20;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1311, 250);
+            this.button4.Location = new System.Drawing.Point(1311, 153);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 49);
             this.button4.TabIndex = 21;
@@ -225,7 +227,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1135, 254);
+            this.label5.Location = new System.Drawing.Point(1135, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 16);
             this.label5.TabIndex = 22;
@@ -234,7 +236,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1135, 282);
+            this.label6.Location = new System.Drawing.Point(1135, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 16);
             this.label6.TabIndex = 23;
@@ -243,18 +245,32 @@
             // dataGridView6
             // 
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(1074, 315);
+            this.dataGridView6.Location = new System.Drawing.Point(1074, 218);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersWidth = 51;
             this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(434, 312);
+            this.dataGridView6.Size = new System.Drawing.Size(434, 329);
             this.dataGridView6.TabIndex = 24;
+            // 
+            // windowsUIButtonPanel1
+            // 
+            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Devexpress Form", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.Black;
+            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(1379, 553);
+            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(129, 74);
+            this.windowsUIButtonPanel1.TabIndex = 25;
+            this.windowsUIButtonPanel1.Text = "Devexpress Form";
+            this.windowsUIButtonPanel1.Click += new System.EventHandler(this.windowsUIButtonPanel1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1520, 639);
+            this.Controls.Add(this.windowsUIButtonPanel1);
             this.Controls.Add(this.dataGridView6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -312,6 +328,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView6;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
     }
 }
 
