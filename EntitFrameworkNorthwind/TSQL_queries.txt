@@ -1,0 +1,85 @@
+﻿create PROCEDURE sp_priceRange
+@minimumprice INT,
+@maximumprice INT 
+as
+select ProductName,CategoryName, UnitPrice from Products 
+inner join Categories on Products.CategoryID = Categories.CategoryID
+where UnitPrice between @minimumprice  and @maximumprice 
+go
+
+exec sp_priceRange @minimumprice=12,@maximumprice=14
+
+drop proc sp_priceRange  
+
+
+
+
+create FUNCTION fn_TLKURU (@OrderID int)
+RETURNS int
+AS BEGIN
+ declare @result int
+ 
+ set @result  = (select  avg(UnitPrice)*33 from [Order Details] where [Order Details].OrderID=@OrderID)
+
+  return @result
+END
+
+select [dbo].[fn_TLKURU](10251)
+
+drop FUNCTION fn_TLKURU  
+
+
+
+
+create function fn_shippingTerm 
+(@ilkdate date, @sondate  date)
+returns table
+as return
+(
+select Orders.ShipName, Orders.ShippedDate, [Orders].ShipCountry from [Orders] where ShippedDate between @ilkdate and @sondate
+)
+go
+
+
+select * from fn_shippingTerm ('19960714', '19960801')
+
+drop FUNCTION fn_shippingTerm  
+
+
+
+
+
+create view view_heavy 
+as
+SELECT ShipName, ShipCity,Freight
+FROM [NORTHWND].[dbo].[Orders]
+where Freight>400
+
+
+select * from view_heavy
+
+drop view view_heavy 
+
+
+
+
+
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+DELETE FROM table_name WHERE condition;
+
+
+
+
+
+CREATE TRIGGER trigger_ismi
+ON [ALL SERVER] \ DATABASE \ [TABLE OR VIEW]
+AFTER\INSTEAD OF
+AS 
+<Sorgular>
